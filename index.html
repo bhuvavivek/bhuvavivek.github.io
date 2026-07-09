@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vivek Bhuva — Senior Backend Engineer · Python, Kafka, Distributed Systems</title>
+<meta name="description" content="Vivek Bhuva is a senior backend engineer building distributed, event-driven systems and observability platforms — Python, FastAPI, Apache Kafka, ClickHouse, gRPC, Kubernetes. Based in Ahmedabad, India. Open to backend and full-stack roles.">
+<meta name="author" content="Vivek Bhuva">
+<link rel="canonical" href="https://bhuvavivek.github.io/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Vivek Bhuva — Senior Backend Engineer">
+<meta property="og:description" content="Distributed systems, event-driven architecture & observability. Python · FastAPI · Kafka · ClickHouse · gRPC · Kubernetes.">
+<meta property="og:url" content="https://bhuvavivek.github.io/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vivek Bhuva — Senior Backend Engineer">
+<meta name="twitter:description" content="Distributed systems, event-driven architecture & observability. Python · FastAPI · Kafka · ClickHouse · gRPC · Kubernetes.">
+
+<!-- Person schema: this is what Google reads for name searches -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Vivek Bhuva",
+  "jobTitle": "Senior Backend Engineer",
+  "description": "Backend engineer building distributed, event-driven systems and observability platforms.",
+  "email": "mailto:bhuvavivek67@gmail.com",
+  "url": "https://bhuvavivek.github.io/",
+  "address": { "@type": "PostalAddress", "addressLocality": "Ahmedabad", "addressRegion": "Gujarat", "addressCountry": "IN" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Bhagwan Mahaveer College of Engineering & Technology" },
+  "knowsAbout": ["Python", "FastAPI", "Apache Kafka", "Distributed Systems", "ClickHouse", "gRPC", "Kubernetes", "Node.js", "TypeScript", "Observability"],
+  "sameAs": [
+    "https://www.linkedin.com/in/vivekhb/",
+    "https://github.com/bhuvavivek"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#0E141B;          /* deep NOC slate, not pure black */
+    --surface:#151C25;
+    --line:#232B36;
+    --text:#E6EDF3;
+    --muted:#8B98A5;
+    --amber:#FFB454;       /* telemetry alarm amber */
+    --amber-dim:#8a6127;
+    --cyan:#5CCFE6;
+    --ok:#7FD962;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+    font-size:16.5px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--amber);color:#0E141B}
+  a{color:var(--cyan);text-decoration:none}
+  a:hover{text-decoration:underline;text-underline-offset:3px}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:2px}
+
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+
+  /* ---------- header ---------- */
+  header{padding:28px 0}
+  .head-row{display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--muted)}
+  .brand b{color:var(--text);font-weight:500}
+  nav{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:13.5px}
+  nav a{color:var(--muted)}
+  nav a:hover{color:var(--amber);text-decoration:none}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;padding:72px 0 84px;overflow:hidden}
+  .status{
+    display:inline-flex;align-items:center;gap:9px;
+    font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--ok);
+    border:1px solid var(--line);border-radius:999px;padding:6px 14px;
+    background:var(--surface);margin-bottom:28px;
+  }
+  .status .dot{width:7px;height:7px;border-radius:50%;background:var(--ok);animation:pulse 2.4s ease-in-out infinite}
+  h1{
+    font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+    font-size:clamp(44px,8vw,76px);line-height:1.02;letter-spacing:-0.02em;
+  }
+  .hero .role{
+    font-family:"Bricolage Grotesque",sans-serif;font-weight:600;
+    font-size:clamp(20px,3.2vw,27px);color:var(--amber);margin-top:14px;letter-spacing:-0.01em;
+    max-width:30ch;line-height:1.25;
+  }
+  .hero p.lede{max-width:56ch;margin-top:22px;color:var(--muted);font-size:17.5px}
+  .hero p.lede b{color:var(--text);font-weight:500}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .btn{
+    font-family:"IBM Plex Mono",monospace;font-size:14px;
+    padding:12px 22px;border-radius:6px;border:1px solid var(--line);
+    color:var(--text);background:var(--surface);transition:border-color .15s,transform .15s;
+  }
+  .btn:hover{border-color:var(--amber);text-decoration:none;transform:translateY(-1px)}
+  .btn.primary{background:var(--amber);color:#141414;border-color:var(--amber);font-weight:500}
+  .btn.primary:hover{background:#ffc77a}
+
+  /* signature: root-cause topology graph */
+  .topo{position:absolute;right:-40px;top:30px;width:380px;opacity:.85;pointer-events:none}
+  .topo .edge{stroke:var(--line);stroke-width:1.3}
+  .topo .edge.hot{stroke:var(--amber-dim);stroke-dasharray:4 3;animation:flow 2.8s linear infinite}
+  .topo .node{fill:var(--surface);stroke:#3a4553;stroke-width:1.3}
+  .topo .node.alarm{stroke:var(--amber);animation:pulse 2.2s ease-in-out infinite}
+  .topo .node.root{fill:var(--amber);stroke:var(--amber)}
+  .topo .root-glow{fill:none;stroke:var(--amber);opacity:.35;animation:ring 2.8s ease-out infinite}
+  .topo text{font-family:"IBM Plex Mono",monospace;font-size:9.5px;fill:var(--muted)}
+  .topo .root-label{fill:var(--amber)}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  @keyframes flow{to{stroke-dashoffset:-14}}
+  @keyframes ring{0%{r:9;opacity:.5}100%{r:26;opacity:0}}
+  @media (prefers-reduced-motion: reduce){
+    .topo .edge.hot,.topo .node.alarm,.topo .root-glow,.status .dot{animation:none}
+  }
+
+  /* ---------- sections ---------- */
+  section{padding:56px 0;border-top:1px solid var(--line)}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--amber);
+    margin-bottom:26px;letter-spacing:.02em;
+  }
+  .eyebrow::before{content:"— ";color:var(--muted)}
+  h2{
+    font-family:"Bricolage Grotesque",sans-serif;font-weight:700;
+    font-size:clamp(26px,4vw,34px);letter-spacing:-0.015em;margin-bottom:18px;
+  }
+  .about p{max-width:62ch;color:var(--muted)}
+  .about p + p{margin-top:14px}
+  .about b{color:var(--text);font-weight:500}
+
+  /* experience as an event stream */
+  .job{display:grid;grid-template-columns:170px 1fr;gap:10px 28px;padding:26px 0}
+  .job + .job{border-top:1px dashed var(--line)}
+  .job .when{font-family:"IBM Plex Mono",monospace;font-size:13.5px;color:var(--muted);padding-top:4px}
+  .job .when .live{color:var(--ok)}
+  .job h3{font-size:18.5px;font-weight:600}
+  .job .co{color:var(--amber);font-weight:500}
+  .job .ctx{color:var(--muted);font-size:15px;margin-top:4px;font-style:italic}
+  .job ul{margin-top:12px;list-style:none}
+  .job li{
+    padding-left:20px;position:relative;color:var(--muted);font-size:15.5px;margin-top:8px;
+  }
+  .job li::before{content:"›";position:absolute;left:2px;color:var(--amber)}
+  .job li b{color:var(--text);font-weight:500}
+
+  /* skills */
+  .skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .skill{
+    background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 18px;
+  }
+  .skill .k{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--amber);margin-bottom:8px}
+  .skill .v{font-size:15px;color:var(--text)}
+
+  /* contact */
+  .contact p{max-width:56ch;color:var(--muted);margin-bottom:26px}
+  .links{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px}
+  .email-big{
+    font-family:"Bricolage Grotesque",sans-serif;font-weight:700;
+    font-size:clamp(20px,3.6vw,30px);color:var(--text);letter-spacing:-0.01em;
+  }
+  .email-big:hover{color:var(--amber);text-decoration:none}
+
+  footer{border-top:1px solid var(--line);padding:30px 0 48px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+    font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted)}
+
+  @media (max-width:760px){
+    .topo{display:none}
+    .job{grid-template-columns:1fr;gap:6px}
+    .job .when{padding-top:0}
+  }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="head-row">
+    <div class="brand"><b>vivek@bhuva</b>:~$</div>
+    <nav aria-label="Site">
+      <a href="#about">about</a>
+      <a href="#experience">experience</a>
+      <a href="#skills">stack</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <!-- signature: alarms converge to one root cause -->
+    <svg class="topo" viewBox="0 0 380 300" aria-hidden="true">
+      <line class="edge" x1="60" y1="40" x2="150" y2="95"/>
+      <line class="edge hot" x1="310" y1="35" x2="205" y2="110"/>
+      <line class="edge" x1="330" y1="140" x2="230" y2="135"/>
+      <line class="edge hot" x1="70" y1="180" x2="160" y2="140"/>
+      <line class="edge" x1="120" y1="255" x2="180" y2="165"/>
+      <line class="edge hot" x1="290" y1="245" x2="210" y2="155"/>
+      <line class="edge" x1="150" y1="95" x2="190" y2="130"/>
+      <line class="edge" x1="205" y1="110" x2="190" y2="130"/>
+      <circle class="node" cx="60" cy="40" r="8"/>
+      <circle class="node alarm" cx="310" cy="35" r="8"/>
+      <circle class="node" cx="330" cy="140" r="8"/>
+      <circle class="node alarm" cx="70" cy="180" r="8"/>
+      <circle class="node" cx="120" cy="255" r="8"/>
+      <circle class="node alarm" cx="290" cy="245" r="8"/>
+      <circle class="node" cx="150" cy="95" r="8"/>
+      <circle class="node" cx="205" cy="110" r="8"/>
+      <circle class="root-glow" cx="190" cy="132" r="9"/>
+      <circle class="node root" cx="190" cy="132" r="9"/>
+      <text x="208" y="136" class="root-label">root_cause</text>
+      <text x="272" y="22">alarm</text>
+      <text x="40" y="200">alarm</text>
+      <text x="248" y="265">alarm</text>
+    </svg>
+
+    <div class="status"><span class="dot"></span>status: open to backend &amp; full-stack roles</div>
+    <h1>Vivek Bhuva</h1>
+    <div class="role">Senior Backend Engineer — distributed systems &amp; observability</div>
+    <p class="lede">
+      I build the systems that watch other systems: <b>event-driven pipelines on Kafka</b>,
+      telemetry at infrastructure scale, and <b>root-cause analysis</b> that turns a flood of
+      alarms into the one failure that actually matters.
+    </p>
+    <div class="cta-row">
+      <a class="btn primary" href="mailto:bhuvavivek67@gmail.com">get in touch</a>
+      <a class="btn" href="https://www.linkedin.com/in/vivekhb/" rel="me">linkedin</a>
+      <a class="btn" href="https://github.com/bhuvavivek" rel="me">github</a>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="eyebrow">about</div>
+      <h2>Systems that stay up, and say why when they don't.</h2>
+      <p>
+        For the last 3 years I've built scalable backend platforms — most recently at
+        <b>NetAI</b>, on a network observability &amp; AIOps platform monitoring
+        <b>thousands of network devices</b> across multi-site enterprise networks.
+        My work spans device collection, topology generation, event-driven alerting and
+        root-cause analysis — services I designed, shipped and ran in production.
+      </p>
+      <p>
+        Before that I shipped full-stack SaaS products with <b>Node.js, TypeScript and React</b> —
+        so I'm comfortable owning a feature from UI to deployment. My core stack today:
+        <b>Python, FastAPI, Apache Kafka, ClickHouse, Redis, gRPC, Docker, Kubernetes, AWS</b>.
+      </p>
+      <p>Based in Ahmedabad, India · open to Bangalore, Hyderabad, Pune &amp; remote · available immediately.</p>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="eyebrow">experience · event stream</div>
+      <h2>Career log</h2>
+
+      <div class="job">
+        <div class="when">2025-03 → <span class="live">now</span></div>
+        <div>
+          <h3>Senior Backend Engineer · <span class="co">NetAI Inc.</span></h3>
+          <div class="ctx">Network observability &amp; AIOps platform — SNMP, logs, traps, NetFlow at scale</div>
+          <ul>
+            <li>Cut device-collection overhead <b>~30%</b> with a pooled, reusable SSH session layer across multi-vendor hardware (Cisco IOS/XR, NX-OS, Juniper, Arista, Huawei)</li>
+            <li>Engineered <b>Kafka event-driven alerting</b> fanning out to 5 channels — routing, enrichment, suppression, escalation</li>
+            <li>Built <b>gRPC services</b> powering topology generation &amp; real-time visualization, backed by Redis + compressed ClickHouse storage</li>
+            <li>Implemented <b>alarm correlation &amp; root-cause analysis</b> combining topology, telemetry and event relationships</li>
+            <li>Shipped observability workflows across Kafka, ClickHouse, Elasticsearch and VictoriaMetrics</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">2024-08 → 2025-02</div>
+        <div>
+          <h3>Full-Stack Engineer · <span class="co">SwiftRut Technologies</span></h3>
+          <ul>
+            <li>Delivered scalable web apps and backend services with <b>Node.js + TypeScript</b>, cloud-native deployment on AWS &amp; GCP</li>
+            <li>Optimized CI/CD pipelines and <b>Kubernetes</b> orchestration with the DevOps team</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">2023-03 → 2024-08</div>
+        <div>
+          <h3>Software Developer · <span class="co">Vermillion Tech</span></h3>
+          <ul>
+            <li>Shipped full-stack SaaS products (salon management, e-commerce, B2B) on the <b>MERN stack + Next.js</b></li>
+            <li>Integrated payment gateways (Razorpay, Paytm, Stripe) with webhook workflows and Redis caching</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="eyebrow">stack</div>
+      <h2>Tools I run in production</h2>
+      <div class="skill-grid">
+        <div class="skill"><div class="k">languages</div><div class="v">Python · TypeScript · JavaScript · SQL</div></div>
+        <div class="skill"><div class="k">backend</div><div class="v">FastAPI · Node.js · gRPC · REST · asyncio · Celery</div></div>
+        <div class="skill"><div class="k">streaming</div><div class="v">Apache Kafka · event-driven architecture</div></div>
+        <div class="skill"><div class="k">data</div><div class="v">PostgreSQL · ClickHouse · Redis · Elasticsearch · MongoDB</div></div>
+        <div class="skill"><div class="k">observability</div><div class="v">Prometheus · Grafana · VictoriaMetrics</div></div>
+        <div class="skill"><div class="k">infra</div><div class="v">Docker · Kubernetes · AWS · Linux · CI/CD</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div class="eyebrow">contact</div>
+      <h2>Hiring, or just want to talk systems?</h2>
+      <p>I reply fast. Resume, references and code samples on request.</p>
+      <a class="email-big" href="mailto:bhuvavivek67@gmail.com">bhuvavivek67@gmail.com</a>
+      <div class="links">
+        <a class="btn" href="https://www.linkedin.com/in/vivekhb/" rel="me">linkedin/vivekhb</a>
+        <a class="btn" href="https://github.com/bhuvavivek" rel="me">github/bhuvavivek</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Vivek Bhuva</span>
+    <span>ahmedabad, in · utc+5:30</span>
+  </div>
+</footer>
+
+</body>
+</html>
