@@ -1,2 +1,3 @@
 # bhuvavivek.github.io
-Personal website — Vivek Bhuva, Senior Backend Engineer (Python, Kafka, Distributed Systems)
+
+This address now redirects to **[vivekbhuva.com](https://vivekbhuva.com)**, Vivek Bhuva's current website.
